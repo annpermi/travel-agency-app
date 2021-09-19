@@ -6,9 +6,8 @@
 }
 
 .home,
-.services,
-.products,
-.sign-up {
+.tour,
+.contacts {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -16,7 +15,17 @@
   font-size: 3rem;
 }
 
-.services {
+.about {
+  background-image: url("./images/img-2.jpg");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  height: 90vh;
+  /* color: #fff; */
+  /* font-size: 100px; */
+}
+
+.tour {
   background-image: url("./images/img-2.jpg");
   background-position: center;
   background-size: cover;
@@ -25,16 +34,7 @@
   font-size: 100px;
 }
 
-.products {
-  background-image: url("./images/img-1.jpg");
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.sign-up {
+.contacts {
   background-image: url("./images/img-8.jpg");
   background-position: center;
   background-size: cover;

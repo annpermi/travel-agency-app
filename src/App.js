@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
+import Tour from './components/pages/Tour';
+import About from './components/pages/About';
+import Contacts from './components/pages/Contacts';
 import './App.css';
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home}/>
-          <Route path='/services' component={Services}/>
-          <Route path='/products' component={Products}/>
-          <Route path='/sign-up' component={SignUp}/>
+          <Route path='/tour' component={Tour}/>
+          <Route path='/about' component={About}/>
+          <Route path='/contacts' component={Contacts}/>
         </Switch>
       </Router>
     </>

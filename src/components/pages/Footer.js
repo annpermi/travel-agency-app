@@ -8,51 +8,45 @@ function Footer() {
         <div className='footer-container'>
             <section className="footer-subscription">
                 <p className="footer-subscription-heading">
-                    Join the Adventure newsletter to receive our best vacation deals
+                    Подпишитесь на рассылку
                 </p>
                 <p className="footer-subscription-text">
-                    You can unsubscribe at any time.
+                    И вы первыми узнаете о наших секретных акциях
                 </p>
                 <div className="input-areas">
                     <form>
-                        <input type="email" name='email' placeholder='Your Email' className='footer-input'/>
-                        <Button buttonStyle='btn--outline'>Subscribe</Button>
+                        <input type="email" name='email' placeholder='Введите ваш емейл' className='footer-input'/>
+                        <Button buttonStyle='btn--outline'>Подписаться</Button>
                     </form>
                 </div>
             </section>
             <div className="footer-links">
                 <div className="footer-link-wrapper">
                     <div className="footer-link-items">
-                        <h2>About Us</h2>
-                        <Link to='/sign-up'>How it works</Link>
-                        <Link to='/'>Testimonials</Link>
-                        <Link to='/'>Careers</Link>
-                        <Link to='/'>Terms of Service</Link>
+                        <h2>О компании</h2>
+                        <Link to='/about'>О нас</Link>
+                        <Link to='/contacts'>Контакты</Link>
+                        <Link to='/'>Отзывы о нас</Link>
+                        <Link to='/'>Наши партнеры</Link>
                     </div>
                     <div class='footer-link-items'>
-                        <h2>Contact Us</h2>
-                        <Link to='/'>Contact</Link>
-                        <Link to='/'>Support</Link>
-                        <Link to='/'>Destinations</Link>
-                        <Link to='/'>Sponsorships</Link>
+                        <h2>Туристам</h2>
+                        <Link to='/'>Пользовательское соглашение</Link>
+                        <Link to='/'>Правила покупки</Link>
+                        <Link to='/'>Туры в рассрочку</Link>
+                        <Link to='/'>Страхование</Link>
                     </div>
                 </div>
-                <div className='footer-link-wrapper'>
+                {/* <div className='footer-link-wrapper'>
                     <div class='footer-link-items'>
-                        <h2>Videos</h2>
-                        <Link to='/'>Submit Video</Link>
-                        <Link to='/'>Ambassadors</Link>
-                        <Link to='/'>Agency</Link>
-                        <Link to='/'>Influencer</Link>
-                    </div>
-                    <div class='footer-link-items'>
-                        <h2>Social Media</h2>
-                        <Link to='/'>Instagram</Link>
-                        <Link to='/'>Facebook</Link>
+                        <h2>Мы в социальных сетях</h2>
+                        <a href='https://www.instagram.com/ekbtours/' target="_blank">Instagram</a>
+                        <a href='https://vk.com/ivangelista' target="_blank">Vkontakte</a>
+                        {/* <Link to='/'>Vkontakte</Link>
                         <Link to='/'>Youtube</Link>
                         <Link to='/'>Twitter</Link>
                     </div>
-                </div>
+                </div> */}
             </div>
             <section className="social-media">
                 <div className="social-media-wrap">
@@ -63,12 +57,12 @@ function Footer() {
                     </div>
                     <small className='website-rights'>Ivangelista © 2021</small>
                     <div className="social-icons">
-                        <Link to='https://vk.com/ivangelista' target='_blank' aria-label='Vkontakte' className="social-icon-link vk">
+                        <a href='https://vk.com/ivangelista' target='_blank' aria-label='Vkontakte' className="social-icon-link vk">
                             <i class="fab fa-vk"></i>
-                        </Link>
-                        <Link to='https://www.instagram.com/ekbtours/' target='_blank' aria-label='Instagram' className="social-icon-link instagram">
+                        </a>
+                        <a href='https://www.instagram.com/ekbtours/' target='_blank' aria-label='Instagram' className="social-icon-link instagram">
                             <i class="fab fa-instagram"></i>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </section>

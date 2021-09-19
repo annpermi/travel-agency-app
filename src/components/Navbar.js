@@ -35,27 +35,37 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                                Home
+                            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+                                О нас
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
-                                Services
+                            <Link to='/tour' className='nav-links' onClick={closeMobileMenu}>
+                                Заказать тур
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
-                                Products
-                            </Link>
+                            <a href='https://sletat.ru/?_ga=2.47833895.1267186617.1603141839-2075412.1601587101' target="_blank" className='nav-links' onClick={closeMobileMenu}>
+                                Поиск туров
+                            </a>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                                Sign up
+                            <Link to='/contacts' className='nav-links' onClick={closeMobileMenu}>
+                                Контакты
                             </Link>
                         </li>
+                        {/* <li className='nav-item'>
+                            <a href='/' className='nav-links' onClick={closeMobileMenu}>
+                                Отзывы
+                            </a>
+                        </li> */}
+                        {/* <li className='nav-item'>
+                            <Link to='/' className='nav-links-mobile' onClick={closeMobileMenu}>
+                                Войти в личный кабинет
+                            </Link>
+                        </li> */}
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                    {/* {button && <Button buttonStyle='btn--outline'>Войти в личный кабинет</Button>} */}
                 </div>
             </nav>
         </>
