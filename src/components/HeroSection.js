@@ -8,10 +8,8 @@ function HeroSection() {
         <div className='hero-container'>
             <video src="/videos/rus_mountains.mp4" autoPlay loop muted poster="../images/img-home.jpg"/>
             <h1>WE LOVE TRAVEL</h1>
-            {/* <p>What are you waiting for?</p> */}
             <div className="hero-btns">
-                <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>Заказать тур</Button>
-                {/* <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>Заказать тур</Button> */}
+                    <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>Заказать тур</Button>
                 {/* <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>Популярные направления 
                 <i className="fas fa-plane"></i></Button> */}
             </div>
