@@ -13,7 +13,7 @@ function HeroSection() {
                 <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>Заказать тур</Button>
                 {/* <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>Заказать тур</Button> */}
                 {/* <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>Популярные направления 
-                <i class="fas fa-plane"></i></Button> */}
+                <i className="fas fa-plane"></i></Button> */}
             </div>
         </div>
     )

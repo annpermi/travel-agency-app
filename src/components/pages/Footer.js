@@ -38,7 +38,7 @@ function Footer() {
                     </div>
                 </div>
                 {/* <div className='footer-link-wrapper'>
-                    <div class='footer-link-items'>
+                    <div className='footer-link-items'>
                         <h2>Мы в социальных сетях</h2>
                         <a href='https://www.instagram.com/ekbtours/' target="_blank">Instagram</a>
                         <a href='https://vk.com/ivangelista' target="_blank">Vkontakte</a>
@@ -57,11 +57,11 @@ function Footer() {
                     </div>
                     <small className='website-rights'>Ivangelista © 2021</small>
                     <div className="social-icons">
-                        <a href='https://vk.com/ivangelista' target='_blank' aria-label='Vkontakte' className="social-icon-link vk">
-                            <i class="fab fa-vk"></i>
+                        <a href='https://vk.com/ivangelista' target='_blank' rel="noreferrer" aria-label='Vkontakte' className="social-icon-link vk">
+                            <i className="fab fa-vk"></i>
                         </a>
-                        <a href='https://www.instagram.com/ekbtours/' target='_blank' aria-label='Instagram' className="social-icon-link instagram">
-                            <i class="fab fa-instagram"></i>
+                        <a href='https://www.instagram.com/ekbtours/' target='_blank' rel="noreferrer" aria-label='Instagram' className="social-icon-link instagram">
+                            <i className="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>

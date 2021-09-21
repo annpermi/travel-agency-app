@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {Button} from './Button';
+// import {Button} from './Button';
 import './Navbar.css';
 
 function Navbar() {
@@ -45,7 +45,7 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <a href='https://sletat.ru/?_ga=2.47833895.1267186617.1603141839-2075412.1601587101' target="_blank" className='nav-links' onClick={closeMobileMenu}>
+                            <a href='https://sletat.ru/?_ga=2.47833895.1267186617.1603141839-2075412.1601587101' target="_blank" rel="noreferrer" className='nav-links' onClick={closeMobileMenu}>
                                 Поиск туров
                             </a>
                         </li>
