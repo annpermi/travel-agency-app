@@ -6,11 +6,11 @@
 
 > Responsive Web Design
 
-## [Working URL](https://ivangelistatour.netlify.app/)
+## [Working URL](https://ivangelista.netlify.app/)
 
 ## Desktop
-![travel-app-desctop](https://user-images.githubusercontent.com/74892817/134205908-0f133a24-1b8a-4bd6-bbea-5ea90d66caba.gif)
 
+![travel-app-desctop](https://user-images.githubusercontent.com/74892817/134205908-0f133a24-1b8a-4bd6-bbea-5ea90d66caba.gif)
 
 ## Mobile
 
