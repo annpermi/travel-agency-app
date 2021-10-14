@@ -9,14 +9,14 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" classes={{ root: classes.appbar }}>
       <Toolbar className={classes.toolbar}>
-        <Typography variant="h5" className={classes.title}>
+        {/* <Typography variant="h5" className={classes.title}>
           Travel Advisor
-        </Typography>
-        <Box display="flex">
+        </Typography> */}
+        <Box display="flex" classes={{ root: classes.box }}>
           <Typography variant="h6" className={classes.title}>
-            Explore new places
+            Исследуй новые места
           </Typography>
           {/* <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}> */}
           <div className={classes.search}>
@@ -24,7 +24,7 @@ const Header = () => {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Поиск..."
               classes={{ root: classes.inputRoot, input: classes.inputInput }}
             />
           </div>

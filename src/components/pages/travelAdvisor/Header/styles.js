@@ -1,3 +1,4 @@
+import { grey } from "@material-ui/core/colors";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
@@ -41,6 +42,13 @@ export default makeStyles((theme) => ({
   },
   toolbar: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
+  },
+  appbar: {
+    backgroundColor: "transparent",
+    color: "black",
+    boxShadow:
+      "-1px 0px 4px -1px rgb(0 0 0 / 20%), 0px -12px 5px 0px rgb(0 0 0 / 14%), 0px -11px 10px 0px rgb(0 0 0 / 22%)",
+    justifyContent: "flex-end",
   },
 }));

@@ -7,20 +7,17 @@ import Rating from "@material-ui/lab/Rating";
 // import mapStyles from '../../mapStyles';
 import useStyles from "./styles";
 
-const Map = (
-  {
-    //   coords,
-    //   places,
-    //   setCoords,
-    //   setBounds,
-    //   setChildClicked,
-    //   weatherData,
-  }
-) => {
+const Map = ({
+  coordinates,
+  //   places,
+  setCoordinates,
+  setBounds,
+  //   setChildClicked,
+  //   weatherData,
+}) => {
   //mobile
   //   const matches = useMediaQuery("(min-width:600px)");
   const classes = useStyles();
-  const coordinates = { lat: 0, log: 0 };
 
   return (
     <div className={classes.mapContainer}>
@@ -28,18 +25,16 @@ const Map = (
         // bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
         bootstrapURLKeys={{ key: "AIzaSyB4MdqkqJwd4LAi9SWkVIR6vFgZaDPtEVc" }}
         defaultCenter={coordinates}
-        // center={coords}
         center={coordinates}
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
         // options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
         options={""}
-        // onChange={""}
         // onChildClick={""}
-        // onChange={(e) => {
-        //   setCoords({ lat: e.center.lat, lng: e.center.lng });
-        //   setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
-        // }}
+        onChange={(e) => {
+          setCoordinates({ lat: e.center.lat, lng: e.center.lng });
+          setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
+        }}
         // onChildClick={(child) => setChildClicked(child)} //when you click on restaurant component
       >
         {/* {places.length && places.map((place, i) => (
