@@ -1,10 +1,16 @@
 # Travel Agency
 
-> React Hooks,
+> React Hooks and Refs,
 
 > React Router,
 
-> Responsive Web Design
+> Axios,
+
+> Responsive Web Design,
+
+> Material UI,
+
+> Google Maps API
 
 ## [Working URL](https://ivangelista.netlify.app/)
 
