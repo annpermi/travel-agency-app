@@ -9,6 +9,7 @@ const TravelAdvisor = () => {
   const [places, setPlaces] = useState([]);
 
   const [coordinates, setCoordinates] = useState({});
+  //bounds to get data from exact square
   const [bounds, setBounds] = useState(null);
 
   //Get user current location
@@ -22,8 +23,8 @@ const TravelAdvisor = () => {
 
   //Get places at current location by default
   useEffect(() => {
-    console.log(coordinates, bounds);
-    getPlacesData()
+    // console.log(coordinates, bounds);
+    getPlacesData(bounds.sw, bounds.ne) //bounds.sw, bounds.ne
       //.then - because getPlacesData async
       .then((data) => {
         setPlaces(data);
@@ -37,7 +38,7 @@ const TravelAdvisor = () => {
       <Header />
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={12} md={4}>
-          <List />
+          <List places={places} />
         </Grid>
         <Grid item xs={12} md={8}>
           <Map
