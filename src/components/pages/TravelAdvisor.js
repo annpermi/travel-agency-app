@@ -7,6 +7,7 @@ import { getPlacesData } from "../../api";
 
 const TravelAdvisor = () => {
   const [type, setType] = useState("restaurants");
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [rating, setRating] = useState("");
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
@@ -17,7 +18,7 @@ const TravelAdvisor = () => {
   /* Lifting the state up */
   const [childClicked, setChildClicked] = useState(null);
 
-  //Get user current location
+  //Get user current location - start at the start
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -26,17 +27,24 @@ const TravelAdvisor = () => {
     );
   }, []);
 
+  /* only for rating */
+  useEffect(() => {
+    const filteredPlaces = places.filter((place) => place.rating > rating);
+    setFilteredPlaces(filteredPlaces);
+  }, [rating]);
+
   //Get places at current location by default
   useEffect(() => {
     setIsLoading(true);
 
-    getPlacesData(bounds.sw, bounds.ne) //bounds.sw, bounds.ne
+    getPlacesData(type, bounds.sw, bounds.ne) //bounds.sw, bounds.ne
       //.then - because getPlacesData async
       .then((data) => {
         setPlaces(data);
+        setFilteredPlaces([]); /* reset filtered places */
         setIsLoading(false);
       });
-  }, [coordinates, bounds]);
+  }, [type, coordinates, bounds]);
 
   return (
     <>
@@ -45,9 +53,15 @@ const TravelAdvisor = () => {
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={12} md={4}>
           <List
-            places={places}
+            places={
+              filteredPlaces.length ? filteredPlaces : places
+            } /* if where is filteredPlaces, only show whem */
             childClicked={childClicked}
             isLoading={isLoading}
+            type={type}
+            setType={setType}
+            rating={rating}
+            setRating={setRating}
           />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -55,7 +69,7 @@ const TravelAdvisor = () => {
             setCoordinates={setCoordinates}
             setBounds={setBounds}
             coordinates={coordinates}
-            places={places}
+            places={filteredPlaces.length ? filteredPlaces : places}
             setChildClicked={setChildClicked}
           />
         </Grid>
