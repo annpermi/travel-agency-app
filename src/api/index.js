@@ -29,7 +29,7 @@ export const getPlacesData = async (sw, ne) => {
         lang: "ru_RU",
       },
       headers: {
-        "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
+        "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_API_KEY,
         "x-rapidapi-key": "c48aef431bmshe33bd7abce1859bp1b8b3bjsn47c9af310a48",
       },
     });

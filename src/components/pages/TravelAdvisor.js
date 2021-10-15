@@ -10,7 +10,7 @@ const TravelAdvisor = () => {
 
   const [coordinates, setCoordinates] = useState({});
   //bounds to get data from exact square
-  const [bounds, setBounds] = useState(null);
+  const [bounds, setBounds] = useState({});
 
   //Get user current location
   useEffect(() => {
