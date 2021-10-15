@@ -6,11 +6,16 @@ import Map from "./travelAdvisor/Map/Map";
 import { getPlacesData } from "../../api";
 
 const TravelAdvisor = () => {
+  const [type, setType] = useState("restaurants");
+  const [rating, setRating] = useState("");
   const [places, setPlaces] = useState([]);
-
   const [coordinates, setCoordinates] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   //bounds to get data from exact square
   const [bounds, setBounds] = useState({});
+
+  /* Lifting the state up */
+  const [childClicked, setChildClicked] = useState(null);
 
   //Get user current location
   useEffect(() => {
@@ -23,14 +28,15 @@ const TravelAdvisor = () => {
 
   //Get places at current location by default
   useEffect(() => {
-    // console.log(coordinates, bounds);
+    setIsLoading(true);
+
     getPlacesData(bounds.sw, bounds.ne) //bounds.sw, bounds.ne
       //.then - because getPlacesData async
       .then((data) => {
         setPlaces(data);
+        setIsLoading(false);
       });
   }, [coordinates, bounds]);
-  //[] - it will show at the start of our application
 
   return (
     <>
@@ -38,13 +44,19 @@ const TravelAdvisor = () => {
       <Header />
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={12} md={4}>
-          <List places={places} />
+          <List
+            places={places}
+            childClicked={childClicked}
+            isLoading={isLoading}
+          />
         </Grid>
         <Grid item xs={12} md={8}>
           <Map
             setCoordinates={setCoordinates}
             setBounds={setBounds}
             coordinates={coordinates}
+            places={places}
+            setChildClicked={setChildClicked}
           />
         </Grid>
       </Grid>

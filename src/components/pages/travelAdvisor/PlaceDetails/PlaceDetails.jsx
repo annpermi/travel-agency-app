@@ -16,7 +16,16 @@ import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles.js";
 
 const PlaceDetails = ({ place, selected, refProp }) => {
-  //   if (selected) refProp?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  /* if selected true, we wanna call that refProp 
+    scrollIntoView - build in method
+    */
+
+  if (selected)
+    refProp?.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
   const classes = useStyles();
 
   return (
@@ -36,10 +45,12 @@ const PlaceDetails = ({ place, selected, refProp }) => {
         <Typography gutterBottom variant="h5">
           {place.name}
         </Typography>
-        {/* <Box display="flex" justifyContent="space-between" my={2}>
+        <Box display="flex" justifyContent="space-between" my={2}>
           <Rating name="read-only" value={Number(place.rating)} readOnly />
-          <Typography component="legend">{place.num_reviews} review{place.num_reviews > 1 && 's'}</Typography>
-        </Box> */}
+          <Typography component="legend">
+            {place.num_reviews} отзыв{place.num_reviews > 1 && "ов"}
+          </Typography>
+        </Box>
         <Box display="flex" justifyContent="space-between">
           <Typography component="legend">Цена</Typography>
           <Typography gutterBottom variant="subtitle1">
