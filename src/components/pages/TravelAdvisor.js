@@ -35,21 +35,25 @@ const TravelAdvisor = () => {
 
   //Get places at current location by default
   useEffect(() => {
-    setIsLoading(true);
+    if (bounds.sw && bounds.ne) {
+      setIsLoading(true);
 
-    getPlacesData(type, bounds.sw, bounds.ne) //bounds.sw, bounds.ne
-      //.then - because getPlacesData async
-      .then((data) => {
-        setPlaces(data);
-        setFilteredPlaces([]); /* reset filtered places */
-        setIsLoading(false);
-      });
-  }, [type, coordinates, bounds]);
+      getPlacesData(type, bounds.sw, bounds.ne) //bounds.sw, bounds.ne
+        //.then - because getPlacesData async
+        .then((data) => {
+          setPlaces(
+            data?.filter((place) => place.name && place.num_reviews > 0)
+          ); /* clear dummy data */
+          setFilteredPlaces([]); /* reset filtered places */
+          setIsLoading(false);
+        });
+    }
+  }, [type, bounds]); //remove coordinates, because we changed in the header
 
   return (
     <>
       <CssBaseline />
-      <Header />
+      <Header setCoordinates={setCoordinates} />
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={12} md={4}>
           <List
