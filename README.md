@@ -10,7 +10,9 @@
 
 > Material UI,
 
-> Google Maps API, google-map-react
+> Google Maps API,
+
+> Weather Map API
 
 ## [Working URL](https://ivangelista.netlify.app/)
 

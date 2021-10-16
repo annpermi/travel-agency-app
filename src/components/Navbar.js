@@ -30,22 +30,12 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Ivangelista
+            TravelWithUs
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
-                О нас
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/tour" className="nav-links" onClick={closeMobileMenu}>
-                Заказать тур
-              </Link>
-            </li>
             <li className="nav-item">
               {/* <a href='https://sletat.ru/?_ga=2.47833895.1267186617.1603141839-2075412.1601587101' target="_blank" rel="noreferrer" className='nav-links' onClick={closeMobileMenu}>
                                 Поиск туров
@@ -56,6 +46,16 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Путешественникам
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                О нас
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/tour" className="nav-links" onClick={closeMobileMenu}>
+                Заказать тур
               </Link>
             </li>
             <li className="nav-item">

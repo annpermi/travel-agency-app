@@ -33,7 +33,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
       {" "}
       {/* nice shadow effect */}
       <CardMedia
-        style={{ height: 350 }}
+        style={{ height: 200 }}
         image={
           place.photo
             ? place.photo.images.large.url

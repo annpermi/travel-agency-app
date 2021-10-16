@@ -3,7 +3,7 @@ import { CssBaseline, Grid } from "@material-ui/core";
 import Header from "./travelAdvisor/Header/Header";
 import List from "./travelAdvisor/List/List";
 import Map from "./travelAdvisor/Map/Map";
-import { getPlacesData } from "../../api";
+import { getPlacesData, getWeatherData } from "../../api";
 
 const TravelAdvisor = () => {
   const [type, setType] = useState("restaurants");
@@ -14,6 +14,7 @@ const TravelAdvisor = () => {
   const [isLoading, setIsLoading] = useState(false);
   //bounds to get data from exact square
   const [bounds, setBounds] = useState({});
+  const [weatherData, setWeatherData] = useState([]);
 
   /* Lifting the state up */
   const [childClicked, setChildClicked] = useState(null);
@@ -38,6 +39,13 @@ const TravelAdvisor = () => {
     if (bounds.sw && bounds.ne) {
       setIsLoading(true);
 
+      /* Get weather info from api */
+      getWeatherData(coordinates.lat, coordinates.lng).then((data) =>
+        setWeatherData(data)
+      );
+      console.log({ weatherData });
+
+      /* Get places info from api */
       getPlacesData(type, bounds.sw, bounds.ne) //bounds.sw, bounds.ne
         //.then - because getPlacesData async
         .then((data) => {
@@ -75,6 +83,7 @@ const TravelAdvisor = () => {
             coordinates={coordinates}
             places={filteredPlaces.length ? filteredPlaces : places}
             setChildClicked={setChildClicked}
+            weatherData={weatherData}
           />
         </Grid>
       </Grid>
