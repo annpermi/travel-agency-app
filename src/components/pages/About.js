@@ -4,11 +4,11 @@ import "./About.css";
 
 export default function About() {
   return (
-    <div className="about">
-      <h1>Coming soon</h1>
-      <div className="about_container">
+    <h1 className="about">
+      Coming soon
+      {/*<div className="about_container">
         <div className="about_container_text">
-          {/* <p>
+           <p>
             Турагентство TravelWithUs на протяжении 20 лет ведет взаимовыгодное
             сотрудничество с надежными и опытными туроператорами в
             Екатеринбурге. Используя эффективные услуги нашего турагентства в
@@ -28,9 +28,9 @@ export default function About() {
             </li>
             <li>Лечебные туры</li>
             <li>Детские лагеря</li>
-          </ul> */}
+          </ul> 
         </div>
-      </div>
-    </div>
+      </div>*/}
+    </h1>
   );
 }

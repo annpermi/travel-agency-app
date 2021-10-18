@@ -3,6 +3,7 @@ import { CssBaseline, Grid } from "@material-ui/core";
 import Header from "./travelAdvisor/Header/Header";
 import List from "./travelAdvisor/List/List";
 import Map from "./travelAdvisor/Map/Map";
+import Footer from "./Footer";
 import { getPlacesData, getWeatherData } from "../../api";
 
 const TravelAdvisor = () => {
@@ -87,6 +88,7 @@ const TravelAdvisor = () => {
           />
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 };

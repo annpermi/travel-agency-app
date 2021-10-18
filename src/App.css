@@ -6,6 +6,7 @@
 }
 
 .home,
+.about,
 .tour,
 .contacts {
   display: flex;
@@ -16,23 +17,23 @@
 }
 
 .about {
-  background-image: url("./images/img-2.jpg");
+  background-image: url("./images/img-home.jpg");
   background-position: center;
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
-  /* color: #fff; */
-  /* font-size: 100px; */
+  height: 95vh;
+  color: #fff;
+  font-size: 100px;
 }
 
-.tour {
+/* .tour {
   background-image: url("./images/img-2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
-}
+} */
 
 .contacts {
   background-image: url("./images/img-8.jpg");
@@ -41,4 +42,5 @@
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+  height: 95vh;
 }

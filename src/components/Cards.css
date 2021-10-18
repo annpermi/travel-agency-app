@@ -1,6 +1,7 @@
 .cards {
   padding: 4rem;
   background: #fff;
+  z-index: 999;
 }
 
 h1 {
