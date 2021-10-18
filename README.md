@@ -16,12 +16,16 @@
 
 > Date-fns
 
-## [Working URL](https://ivangelista.netlify.app/)
+## [Working URL](https://travelwithus-anna.netlify.app/)
 
 ## Desktop
 
-![travel-app-desctop](https://user-images.githubusercontent.com/74892817/134205908-0f133a24-1b8a-4bd6-bbea-5ea90d66caba.gif)
+![travel-app-desktop](https://user-images.githubusercontent.com/74892817/137795896-c8c6e20a-667e-4db4-ab55-fac266505f40.gif)
+
+## Travel Adviser
+
+![travel-adviser](https://user-images.githubusercontent.com/74892817/137797087-2eb7500c-bf08-42e6-b71f-bed9cc481818.gif)
 
 ## Mobile
 
-![travel-mobile](https://user-images.githubusercontent.com/74892817/134206600-e8753ec7-2d91-4c7a-b08f-91ec2dfeca32.gif)
+![travel-app-mobile](https://user-images.githubusercontent.com/74892817/137797408-7a6dd4de-3ae0-42a7-a490-31c321c07f3d.gif)
