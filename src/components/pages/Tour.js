@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "../../App.css";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -10,12 +10,12 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker,
-} from "@material-ui/pickers";
-import DateFnsUtils from "@date-io/date-fns"; // choose your lib
-import deLocale from "date-fns/locale/ru";
+// import {
+//   MuiPickersUtilsProvider,
+//   KeyboardDatePicker,
+// } from "@material-ui/pickers";
+// import DateFnsUtils from "@date-io/date-fns"; // choose your lib
+// import deLocale from "date-fns/locale/ru";
 import Footer from "./Footer";
 import DatePicker from "./DatePicker";
 import "./Tours.css";

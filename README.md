@@ -12,7 +12,9 @@
 
 > Google Maps API,
 
-> Weather Map API
+> Weather Map API,
+
+> Date-fns
 
 ## [Working URL](https://ivangelista.netlify.app/)
 
