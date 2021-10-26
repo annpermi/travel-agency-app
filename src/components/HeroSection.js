@@ -6,6 +6,7 @@ import "./HeroSection.css";
 function HeroSection() {
   return (
     <div className="hero-container">
+      <div id="overlay"></div>
       <video
         src="/videos/rus_mountains.mp4"
         autoPlay
