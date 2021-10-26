@@ -36,7 +36,7 @@ const Tour = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs" style={{ height: "80vh" }}>
+        <Container component="main" maxWidth="xs" style={{ height: "90vh" }}>
           <CssBaseline />
           <Box
             sx={{
