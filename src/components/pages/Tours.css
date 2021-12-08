@@ -19,6 +19,7 @@
   letter-spacing: 0.02857em;
   text-transform: uppercase;
   margin: 20px 0;
+  cursor: pointer;
 }
 
 .btn-tours:hover {
