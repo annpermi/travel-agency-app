@@ -3,27 +3,25 @@
   max-width: 1120px;
   width: 90%;
   margin: 0 auto;
+  background: #fff;
 }
 
 .about_container_text {
-  background: #fff;
-  margin-top: 4rem;
   padding: 4rem;
-  border-radius: 10px;
   text-align: center;
 }
 
-.about_container_text h1 {
+/* .about_container_text h1 {
   font-size: 50px;
   margin-bottom: 20px;
-}
-
+} */
+/* 
 .about_container_text p {
   font-size: 20px;
-}
+} */
 
-.about_container_text ul {
+/* .about_container_text ul {
   list-style: none;
   text-align: center;
   color: rgb(97, 97, 97);
-}
+} */
