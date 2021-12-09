@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "../../App.css";
-// import Button from "@mui/material/Button";
+import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -10,15 +10,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import {
-//   MuiPickersUtilsProvider,
-//   KeyboardDatePicker,
-// } from "@material-ui/pickers";
-// import DateFnsUtils from "@date-io/date-fns"; // choose your lib
-// import deLocale from "date-fns/locale/ru";
 import Footer from "./Footer";
-import DatePicker from "./DatePicker";
-import "./Tours.css";
+import DatePickerNew from "./DatePickerNew";
 
 const Tour = () => {
   const theme = createTheme();
@@ -36,11 +29,16 @@ const Tour = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs" style={{ height: "82vh" }}>
+        <Container
+          component="main"
+          maxWidth="xs"
+          style={{ height: "fit-content" }}
+        >
           <CssBaseline />
           <Box
             sx={{
-              marginTop: 8,
+              marginTop: 6,
+              marginBottom: 6,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -103,7 +101,13 @@ const Tour = () => {
                     // autoComplete="country"
                   />
                 </Grid>
-                <DatePicker />
+                {/* <DatePicker /> */}
+                <Grid item xs={12} sm={6}>
+                  <DatePickerNew label={"Вылет с"} />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <DatePickerNew label={"По"} />
+                </Grid>
                 <Grid item xs={12}>
                   <TextField
                     required
@@ -136,7 +140,7 @@ const Tour = () => {
                 </Grid>
               </Grid>
 
-              {/* <Button
+              <Button
                 type="submit"
                 fullWidth
                 variant="contained"
@@ -144,10 +148,10 @@ const Tour = () => {
                 color="primary"
               >
                 Подтвердить
-              </Button> */}
-              <button className="btn-tours" type="submit">
+              </Button>
+              {/* <button className="btn-tours" type="submit">
                 Подтвердить
-              </button>
+              </button> */}
             </Box>
           </Box>
         </Container>
